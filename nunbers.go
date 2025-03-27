@@ -2,16 +2,24 @@ package main
 
 import "fmt"
 
-const ebolicaoF = 373.0 
+
 
 func main() {
 
-	var temK float64 = ebolicaoF
+for i := 1; i < 100; i++ {
 
-	var tempC float64 = temK - 273
+	multiplosDeTres := i%3 == 0
+	multiplosDeCinco := i%5 == 0
 
-	fmt.Println("A temperatura em K: ", + temK)
-	fmt.Println("A temperatura em c: ", + tempC)
-
+	if multiplosDeTres && multiplosDeCinco {
+			fmt.Println("numero: PINPAN")
+		} else if multiplosDeTres {
+			fmt.Println("numero: PIN")
+		} else if multiplosDeCinco {
+			fmt.Println("numero: PAN")
+		} else {
+			fmt.Println("numero: ",i)
+		}
+}
 
 }
